@@ -1,0 +1,8 @@
+/* components/mysearch/mysearch.wxss */
+input{
+    height:60rpx;
+    border:1px solid #000;
+    border-radius:5rpx;
+    background:#ccc;
+    width:100vw;
+}

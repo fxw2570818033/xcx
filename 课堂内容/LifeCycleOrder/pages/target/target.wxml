@@ -1,0 +1,3 @@
+<!--pages/target/target.wxml-->
+<list></list> 
+<button bindtap="handlePage">上一页</button>

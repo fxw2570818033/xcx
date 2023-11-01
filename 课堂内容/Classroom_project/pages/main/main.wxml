@@ -1,0 +1,24 @@
+<!--pages/main/main.wxml-->
+<swiper indicator-dots="true" autoplay circular="true">
+    <swiper-item wx:for="{{swiperList}}" wx:key="index">
+        <image src="http://localhost:8099{{item.url}}" mode="widthFix"/>
+    </swiper-item>
+</swiper>
+
+<mp-sticky offset-top="0">
+    <mysearch bindeventNav="handleNavigator"></mysearch>
+</mp-sticky>
+
+
+<view class="list">
+    <view bindtap="handleDetail" wx:for="{{listData}}" wx:key="index" class="list_item" data-id="{{item.id}}" data-title="{{item.title}}">
+        <image src="http://localhost:8099{{item.poster}}" mode="widthFix"/>
+        <view>
+            <view style="color:red;">{{item.title}}</view>
+            <view class="feature">{{item.feature}}</view>
+            <view>￥{{item.price}}</view>
+            <view>{{item.goodcomment}}好评</view>
+        </view>
+    </view>
+</view>
+<view wx:if="{{flag}}">已经到底了。。。，没有数据了</view>

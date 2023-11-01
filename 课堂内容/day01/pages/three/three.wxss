@@ -1,0 +1,48 @@
+/* pages/three/three.wxss */
+.box{
+    width:750rpx; 
+    height:100px;
+    background:lightgreen;
+}
+.main{
+    display:flex;
+    flex-direction:row;
+    margin-top:20rpx;
+}
+.main view{
+    flex:1;
+    height:40rpx;
+    border:1px solid black;
+    text-align:center;
+    line-height:40rpx;
+}
+.active{
+    color:white;
+    background:red;
+}
+.left{
+    max-width:600rpx;
+    height:50rpx;
+    white-space:nowrap;
+}
+.left text{
+    display:inline-block;
+    background:deepskyblue;
+    width:100rpx;
+    height:50rpx;
+}
+.top{
+    margin-top:30px;
+    max-height:150rpx;
+}
+.top ::-webkit-scrollbar{
+    display:none;
+    width:0;
+    height:0;
+    color:transparent;
+}
+.top view{
+    background:lightgreen;
+    width:500rpx;
+    height:200rpx;
+}

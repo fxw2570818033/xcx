@@ -1,0 +1,3 @@
+<!--pages/ten/ten.wxml-->
+<time bindeventOver = "timeOver" wx:if="{{flag}}"></time>
+<view wx:else>秒杀活动已结束</view>

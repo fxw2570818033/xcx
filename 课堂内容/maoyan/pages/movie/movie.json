@@ -1,0 +1,12 @@
+{
+    "usingComponents": {
+        "hot":"/components/hot/hot",
+        "cinema":"/components/cinema/cinema",
+        "ready":"/components/ready/ready",
+        "classic":"/components/classic/classic"
+    },
+    "onReachBottomDistance":150,
+    "enablePullDownRefresh":true,
+    "backgroundColor":"#ccc",
+    "backgroundTextStyle":"dark"
+}

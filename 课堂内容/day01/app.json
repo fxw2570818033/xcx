@@ -1,0 +1,74 @@
+{
+    "pages": [
+        "pages/four/four",
+        "pages/eleven/eleven",
+        "pages/nine/nine",
+        "pages/eig/eig",
+        "pages/eight/eight",
+        "pages/seven_i/seven_i",
+        "pages/six/six",
+        "pages/seven-i/seven-i",
+        "pages/five/five",
+        "pages/three/three",
+        "pages/two_wxs/two_wxs",
+        "pages/one_test/one_test",
+        "pages/one/one",
+        "pages/index/index",
+        "pages/logs/logs",
+        "pages/detail/detail",
+        "pages/msg/msg",
+        "pages/exercise/exercise",
+        "pages/twelve/twelve"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#ffff00",
+        "navigationBarTitleText": "全局窗口配置",
+        "navigationBarTextStyle": "black",
+        "backgroundColor": "#000000"
+    },
+    "tabBar": {
+        "color": "#ffffff",
+        "selectedColor": "#00ff00",
+        "backgroundColor": "#0000ff",
+        "list": [
+            {
+                "pagePath": "pages/index/index",
+                "text": "微信",
+                "iconPath": "./icon/微信.png",
+                "selectedIconPath": "./icon/微信1.png"
+            },
+            {
+                "pagePath": "pages/logs/logs",
+                "text": "通讯录",
+                "iconPath": "./icon/通讯录.png",
+                "selectedIconPath": "./icon/通讯录1.png"
+            },
+            {
+                "pagePath": "pages/detail/detail",
+                "text": "发现",
+                "iconPath": "./icon/发现.png",
+                "selectedIconPath": "./icon/_我的.png"
+            },
+            {
+                "pagePath": "pages/msg/msg",
+                "text": "我",
+                "iconPath": "./icon/_我的.png",
+                "selectedIconPath": "./icon/_我的1.png"
+            }
+        ]
+    },
+    "plugins": {
+        "citySelector": {
+             "version": "1.0.2",
+             "provider": "wx63ffb7b7894e99ae"
+         }
+    },
+    "permission": {
+        "scope. userFuzzyLocation": {
+        "desc": "你的位置信息将用于小程序定位"
+        }
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}

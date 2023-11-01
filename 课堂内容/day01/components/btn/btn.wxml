@@ -1,0 +1,6 @@
+<!--components/btn/btn.wxml-->
+<view class="box">
+    <slot name="left"></slot>
+    <text>我是中间分隔的</text>
+    <slot name="right"></slot>
+</view>

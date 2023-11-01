@@ -1,0 +1,6 @@
+<!--components/tabA/tabA.wxml-->
+<!-- <wxs module="active" src="./tabA.wxs"></wxs> -->
+<view>
+    <button bindtap="showClick" class="{{active?'':'bgColor'}}">显示</button>
+    <button bindtap="hideClick" class="{{active?'bgColor':''}}">隐藏</button>
+</view>

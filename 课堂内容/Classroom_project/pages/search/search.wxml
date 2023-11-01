@@ -1,0 +1,4 @@
+<!--pages/search/search.wxml-->
+<!-- <mp-icon type="field" icon="add" color="black" size="{{25}}"></mp-icon>
+<mp-icon icon="add" color="black" size="{{25}}"></mp-icon> -->
+<mp-searchbar bindselectresult="selectResult" search="{{search}}"></mp-searchbar>

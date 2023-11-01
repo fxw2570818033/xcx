@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "tabA":"/components/tabA/tabA",
+        "tabB":"/components/tabB/tabB"
+    }
+}

@@ -1,0 +1,6 @@
+<!--components/tablist/tablist.wxml-->
+<view class="box">
+    <view class="{{current == index ? 'active' : ''}}"wx:for="{{list}}" wx:key="idnex" bindtap="handTab" data-index="{{index}}">
+        {{item}}
+    </view>
+</view>

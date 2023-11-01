@@ -1,0 +1,43 @@
+<!--pages/seven_i/seven_i.wxml-->
+<!-- 
+    1. 定义好 自定义组件
+        在componetns文件中---创建某个组件文件夹---然后右键选第三个Component创建四个分别以.js .json .wxml .wxss文件
+    2. pages文件夹中的 某个父页面对应的那个json文件中进行注册 
+        "usingComponents": {
+            "tabs":"../../components/tabs/tabs"
+        }
+        这里的键 tabs:是自己自定义的在父页面中要引入的组件名称 值：是组件的地址
+    3. 在父页面 wxml中使用
+        使用自己注册的组件名称引入 <tabs></tabs>
+        <tabs list="{{list}}" current="{{i}}" 
+        插值语句中的变量表示父页面中当前的数据状态 
+        tabs组件中的属性要和子组件中的properties中的属性一致  
+        替换data方法里面的变量
+    4.  自定义事件
+        bindeventchange="eventchange"
+        要在子组件中的切换事件中进行触发(子组件中的事件要写在组件methods方法里面)
+            this.triggerEvent('eventchange',index);
+            'eventchange' 是自己定义的事件名称  
+            index 是当前触发的索引
+    5. 在子组件中触发事件以后  父页面中的事件回调函数就会触发
+        eventchange(evt){
+            this.setData({
+                i:evt.detail
+            })
+        },
+    6. swiper中的事件 bindchange 
+        current 改变时会触发 change 事件
+        使用event.detail返回一个对象{current, source}
+        event.detail.current  代表当前项的索引
+        handChange(evt){
+            this.setData({
+                i:evt.detail.current
+            })
+        },
+-->
+<tabs list="{{list}}" current="{{i}}" bindeventchange="eventchange"></tabs>
+<swiper indicator-dots circular bindchange="handChange" current="{{i}}" indicator-color="#ccc" indicator-active-color="red" easing-function="easeInOutCubic">
+    <swiper-item wx:for="{{swiperList}}" wx:key="index">
+        {{item}}
+    </swiper-item>
+</swiper>

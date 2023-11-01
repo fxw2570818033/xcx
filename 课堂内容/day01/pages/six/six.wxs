@@ -1,0 +1,16 @@
+function sum(arr){
+    var total = 0;
+    var num = 0;
+    for(var i = 0; i < arr.length; i++){
+        if(arr[i].isChecked){
+            total += arr[i].price * arr[i].num;
+            num += arr[i].num;
+        }
+    }
+    var obj = {
+        total:total.toFixed(2),
+        num:num*1
+    }
+    return obj;
+}
+module.exports = sum;

@@ -1,0 +1,15 @@
+/* pages/pracitce/practice.wxss */
+.box{
+    display:flex;
+    justify-content:space-around;
+    font-weight:bold;
+}
+.box view{
+    background:lightblue;
+    width:20%;
+    text-align:center;
+}
+.box .active{
+    background:red;
+    color:#fff;
+}

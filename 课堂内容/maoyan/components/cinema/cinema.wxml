@@ -1,0 +1,32 @@
+<!--components/cinema/cinema.wxml-->
+<view wx:if="{{flag}}">
+    <view class="nav-tab">
+        <view wx:for="{{tabList}}" wx:key="index">
+            {{item}}
+        </view>
+    </view>
+    <view class="cinema-list">
+        <view class="cinema-item" wx:for="{{cinemaList}}" wx:key="index">
+            <view class="title">
+                <text class="name">{{item.nm}}</text>
+                <text class="price">{{item.sellPrice}}</text>
+                <text class="fill">元起</text>
+            </view>
+            <view class="location">
+                <view class="addr">{{item.addr}}</view>
+            </view>
+            <view class="label">
+                <view class="label-item">
+                    <text wx:if="{{labelList[index].tag.allowRefund == 1}}" style="border:1px solid #589daf;color:#589daf;">退</text>
+                    <text wx:if="{{labelList[index].tag.endorse == 1}}" style="border:1px solid #589daf;color:#589daf;">改签</text>
+                    <text wx:if="{{labelList[index].tag.snack == 1}}" style="border:1px solid #f90;color:#f90;">小吃</text>
+                    <text wx:if="{{labelList[index].tag.sell == 1}}" style="border:1px solid #f90;color:#f90;">折扣卡</text>
+                    <text class="hallType" wx:for="{{labelList[index].tag.hallType}}" wx:key="index">
+                        <text style="border:1px solid #589daf;color:#589daf;">{{item}}</text>
+                    </text>
+                </view>
+            </view>
+            <view class="discount" wx:if="{{item.promotion.cardPromotionTag != ''}}">{{item.promotion.cardPromotionTag}}</view>
+        </view>    
+    </view>
+</view>

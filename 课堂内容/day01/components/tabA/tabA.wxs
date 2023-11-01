@@ -1,0 +1,9 @@
+function active(flag){
+    if(flag){
+        a = "primary"
+    }else{
+        a = "warn"
+    }
+    return a;
+}
+module.exports = active;

@@ -1,0 +1,14 @@
+<!--components/ready/ready.wxml-->
+<view wx:if="{{flag}}" class="box">
+    <view class="expect">近期最受期待</view>
+    <scroll-view scroll-x enable-flex="true">
+        <view wx:for="{{expect}}" wx:key="index" class="con">
+            <view class="sub">
+                <!-- <image src="{{item.img}}" mode=""/> -->
+                <text class="want">{{item.wish}}人想看</text>
+            </view>
+            <text class="nm">{{item.nm}}</text>
+            <text class="date">{{item.comingTitle}}</text>
+        </view>
+    </scroll-view>
+</view>

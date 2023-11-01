@@ -1,0 +1,8 @@
+/* pages/seven_i/seven_i.wxss */
+swiper-item{
+    background:aqua;
+    text-align:center;
+    line-height:150px;
+    font-size:12px;
+    width:100%;
+} 

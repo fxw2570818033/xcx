@@ -1,0 +1,3 @@
+<!--pages/one/one.wxml-->
+<view>我是第一个页面</view>
+<button bindtap="handle">跳转</button>

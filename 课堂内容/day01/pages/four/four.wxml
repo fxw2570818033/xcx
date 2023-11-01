@@ -1,0 +1,27 @@
+<!--pages/four/four.wxml-->
+<button type="primary" bindtap="getData">获取数据</button>
+<!-- 滚动条 -->
+<!-- <scroll-view class="scroll" scroll-x enable-flex="{{true}}" bindscrolltolower="getlower" enable-passive="{{true}}">
+    <view>1</view>
+    <view>2</view>
+    <view>3</view>
+    <view>4</view>
+    <view>5</view>
+    <view>6</view>
+    <view>7</view>
+    <view>8</view>
+    <view>9</view>
+</scroll-view> -->
+<!-- 网络数据请求 -->
+<view wx:for="{{dataList}}" wc:key="index" class="box">
+    <image src="{{item.img}}" mode="widthFix"/>
+    <view class="center">
+        <text style="font-weight:bold">{{item.nm}}</text>
+        <text>观众评<text style="color:orange">{{item.sc}}</text></text>
+        <text>{{item.desc}}</text>
+        <text>{{item.showInfo}}</text>
+    </view>
+    <!-- <button class="right">{{item.showStateButton.content}}</button> -->
+    <button class="right" bindtap="tranferItem" data-item="{{item}}">详情</button>
+</view>
+<!-- https://p0.pipi.cn/mmdb/fb7386dd9233382c95b12dabd7246f8b9c712.jpg?imageMogr2/thumbnail/2500x2500%3E -->

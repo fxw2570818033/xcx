@@ -1,0 +1,11 @@
+/* pages/one/one.wxss */
+.t1{
+    background:aqua;
+    font-size:30px;
+    color:red;
+}
+#v1{
+    width:100px; height:100px;
+    background:#14c145;
+}
+/* id class tagName :after :before :nth-child() :first-child */

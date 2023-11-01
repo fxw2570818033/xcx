@@ -1,0 +1,89 @@
+<!--pages/exercise/exercise.wxml-->
+<text>pages/exercise/exercise.wxml</text>
+<!-- 数据绑定 -->
+<!-- 
+    简单绑定  
+    数据绑定使用Mustache语法(双大括号)将变量包起来，可以作用于
+-->
+<view>{{message}}</view>
+<!-- 组件属性 需要在双引号之内 -->
+<view id="item-{{id}}">item-id</view>
+<!-- 控制属性 需要在双引号之内 -->
+<view wx:if="{{condition}}">543343</view>
+<!-- 关键字 需要在双引号之内 -->
+<!--  
+    true:boolean类型的true,代表真值
+    false:boolean类型的false,代表假值
+    特别注意：不要直接写checked="false",其计算结果是一个字符串，转成 boolean 类型后代表真值。
+-->
+<checkbox value="" checked="{{true}}"/>承意伟软饭男
+<view wx:for="{{array}}" wx:key="index">{{item}}</view>
+<view wx:if="{{view == 'WEBVIEW'}}">WEBVIEW</view>
+<view wx:elif="{{view == 'APP'}}">APP</view>
+<view wx:else="{{view == 'MINA'}}">MINA</view>
+<!-- 运算 -->
+<!-- 三元运算 -->
+<view hidden="{{flag ? true : false}}">hideen</view>
+<!-- 算术运算 -->
+<view>{{a+b}} + {{c}} + d</view>
+<!-- 逻辑判断 -->
+<view wx:if="{{length > 5}}"></view>
+<!-- 字符串运算 -->
+<view>{{"hello" +  message}}</view>
+<!-- 数据路径运算 -->
+<view>{{object.key}}{{arr[0]}}</view>
+<!-- 组合 -->
+<!-- 数组 -->
+<view wx:for="{{[zero,1,2,3,4]}}"> {{item}}</view>
+<!-- 对象 -->
+
+<view wx:for="{{[6,7,9]}} ">{{item}}</view>
+<view wx:for="{{[6,7,9] + ' '}}">{{item}}</view>
+
+<!-- 列表渲染 -->
+<!-- 
+wx:for
+在组件上使用 wx:for 控制属性绑定一个数组，即可使用数组中各项的数据重复渲染该组件。
+
+默认数组的当前项的下标变量名默认为 index，数组当前项的变量名默认为 item 
+-->
+<!-- 
+使用 wx:for-item 可以指定数组当前元素的变量名，
+
+使用 wx:for-index 可以指定数组当前下标的变量名： 
+-->
+<view wx:for="{{[1, 2, 3, 4, 5, 6, 7, 8, 9]}}" wx:for-item="i">
+  <view wx:for="{{[1, 2, 3, 4, 5, 6, 7, 8, 9]}}" wx:for-item="j">
+    <view wx:if="{{i <= j}}">
+      {{i}} * {{j}} = {{i * j}}
+    </view>
+  </view>
+</view>
+
+<block wx:for="{{[1, 2, 3]}}">
+  <view> {{index}}: </view>
+  <view> {{item}} </view>
+</block>
+<!--  
+    wx:key
+如果列表中项目的位置会动态改变或者有新的项目添加到列表中，并且希望列表中的项目保持自己的特征和状态（如 input 中的输入内容，switch 的选中状态），需要使用 wx:key 来指定列表中项目的唯一的标识符。
+
+wx:key 的值以两种形式提供
+
+1.字符串，代表在 for 循环的 array 中 item 的某个 property，该 property 的值需要是列表中唯一的字符串或数字，且不能动态改变。
+2.保留关键字 *this 代表在 for 循环中的 item 本身，这种表示需要 item 本身是一个唯一的字符串或者数字。
+当数据改变触发渲染层重新渲染的时候，会校正带有 key 的组件，框架会确保他们被重新排序，而不是重新创建，以确保使组件保持自身的状态，并且提高列表渲染时的效率。
+
+如不提供 wx:key，会报一个 warning， 如果明确知道该列表是静态，或者不必关注其顺序，可以选择忽略。
+-->
+
+
+1
+<!-- 当 wx:for 的值为字符串时，会将字符串解析成字符串数组 -->
+<view wx:for="array">
+  {{item}}
+</view>
+
+<view wx:for="{{['a','r','r','a','y']}}">
+  {{item}}
+</view>

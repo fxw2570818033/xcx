@@ -1,0 +1,11 @@
+<!--pages/two_wxs/two_wxs.wxml-->
+<!-- 导入wxs -->
+<wxs src="./two.wxs" module="obj"></wxs>
+<!-- 利用wxs 实现获取日期 -->
+<text>pages/two_wxs/two_wxs.wxml</text>
+<!-- 利用wxs  实现搜索效果 -->
+<view>{{obj.tabTime(time)}}</view>
+<input type="text" value="{{str}}" bindinput="editInput"/>
+<view wx:for="{{obj.filterStr(list,str)}}" wx:key="index">
+    {{item}}
+</view>

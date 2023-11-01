@@ -1,0 +1,12 @@
+<!--pages/pracitce/practice.wxml-->
+<view class="box">
+    <view wx:for="{{list}}" wx:key="index" class="{{index == num?'active':''}}" bindtap="tab" data-id="{{index}}">{{item}}</view>
+</view>
+<!-- <hot wx:if="{{num == 0}}"></hot>
+<cinema wx:elif="{{num == 1}}"></cinema>
+<ready wx:elif="{{num == 2}}"></ready>
+<classic wx:else></classic> -->
+<hot flag="{{num == 0 ? true : false}}"></hot>
+<cinema flag="{{num == 1 ? true : false}}"></cinema>
+<ready flag="{{num == 2 ? true : false}}"></ready>
+<classic flag="{{num == 3 ? true : false}}"></classic>

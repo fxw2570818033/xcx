@@ -1,0 +1,11 @@
+/* pages/nine/nine.wxss */
+.bottom{
+    position:absolute;
+    left:0; bottom:0;
+    width:750rpx;
+    height:400rpx;
+    background:red;
+    text-align:center;
+    font-size:32px;
+    color:white;
+}

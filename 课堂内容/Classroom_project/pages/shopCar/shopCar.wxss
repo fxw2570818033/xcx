@@ -1,0 +1,43 @@
+/* pages/shopCar/shopCar.wxss */
+page{
+    position:relative;
+}
+image{
+    width:150rpx;
+    margin-left:30rpx;
+}
+.cell{
+    display:flex;
+    align-items:center;
+    background:#fff;
+}
+.num{
+    display:flex;
+    width:150rpx;
+    text-align:center;
+    background:#ccc;
+    justify-content:space-between;
+    align-items:center;
+}
+.num text{
+    width:50rpx;
+    font-weight:bold;
+}
+.num input{
+    width:50rpx;
+    background:#fff;
+}
+.total{
+    width:100vw;
+    box-sizing:border-box;
+    padding:20rpx;
+    display:flex;
+    background:#ccc;
+    align-items:center;
+    position:fixed;
+    bottom:0;
+    z-index:100;
+}
+.total>view{
+    margin-left:30vw;
+}

@@ -1,0 +1,25 @@
+// tabtime(){
+//     let d = new Date(this.data.time);
+//     let y = d.getFullYear();
+//     let m = d.getMonth() + 1;
+//     let dd = d.getDate();
+//     return y+'-'+m+'-'+dd;
+// }
+function tabTime(time){
+    var d = getDate(time);
+    var y = d.getFullYear();
+    var m = d.getMonth() + 1;
+    var dd = d.getDate();
+    return y+'-'+m+'-'+dd;
+}
+function filterStr(arr,val){
+    // arr是外面的list val是外面input中输入的值
+    return arr.filter(function(item){
+        // 筛选出arr中每一项item含有val字符的那个数组中的元素 返回一个新的数组
+        return item.indexOf(val) > -1 ;
+    })
+}
+module.exports = {
+    tabTime:tabTime,
+    filterStr:filterStr
+};

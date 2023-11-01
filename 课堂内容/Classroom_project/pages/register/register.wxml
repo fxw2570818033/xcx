@@ -1,0 +1,20 @@
+<!--pages/register/register.wxml-->
+<mp-form-page title="注册电话" subtitle="请输入正确有效的电话号码。">
+    <mp-form id="form" rules="{{rules}}" models="{{formData}}">
+    </mp-form>
+    <checkbox-group slot="tips" bindchange="bindAgreeChange">
+        <label class="weui-agree" for="weuiAgree">
+            <view class="w5555555555eui-agree__text">
+                <checkbox class="weui-agree__checkbox" id="weuiAgree" value="agree" checked="{{isAgree}}" />
+                <view class="weui-agree__checkbox-icon">
+                    <icon class="weui-agree__checkbox-icon-check" type="success_no_circle" size="9" wx:if="{{isAgree}}"></icon>
+                </view>
+                <input type="number" bindinput="changeinput" slot="suffixtips"/>
+                阅读并同意<navigator url="" class="weui-agree__link">《相关条款》</navigator>
+            </view>
+        </label>
+    </checkbox-group>
+    <view slot="button">
+        <button class="weui-btn" type="primary" bindtap="submitForm">确定</button>
+    </view>
+</mp-form-page>

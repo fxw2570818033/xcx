@@ -1,0 +1,55 @@
+<!--pages/movie/movie.wxml-->
+<wxs module="fillText" src="./common.wxs"></wxs>
+<view class="topBar">
+    <text>猫眼电影</text>
+    <view class="btn" bindtap="barShow">
+        <image src="/images/small-bg.png" mode="widthFix"/>
+        <view class="bar-list" wx:if="{{barFlag}}">
+            <view class="bar-list-item" wx:for="{{list}}" wx:key="index">{{item}}</view>
+        </view>
+    </view>
+</view>
+<view class="topNav">
+    <view class="left">
+        <input type="text" value="{{defaultAddress}}" bindinput="editAddress"/>
+    </view>
+    <view class="center">
+        <view class="center-item {{navIndex == index?'active':''}}" wx:for="{{navList}}" wx:key="index" bindtap="navActive" data-index="{{index}}">{{item}}</view>    
+    </view>
+    <view class="right">
+        <image src="/images/search-red.png" mode=""/>
+    </view>
+</view>
+
+<hot flag="{{navIndex == 0 ? true : false}}" hotList="{{hotList}}"></hot>
+<cinema flag="{{navIndex == 1 ? true : false}}" cinemaList="{{cinemaList}}" labelList="{{labelList}}"></cinema>
+<ready flag="{{navIndex == 2 ? true : false}}"></ready>
+<classic flag="{{navIndex == 3 ? true : false}}"></classic>
+
+<!-- 
+<view class="content">
+    <view class="hot">
+        <text>最受好评电影</text>
+        <scroll-view scroll-x="{{true}}" enable-flex="{{true}}">
+            <view class="scroll-item" wx:for="{{fillText(hotList)}}" wx:key="index">
+                <image src="{{item.img}}" mode=""/>
+                <text class="hotScore">{{item.scwish}}</text>
+                <text class="hotName">{{item.nm}}</text>
+            </view>
+        </scroll-view>
+    </view>
+    <view class="movie">
+        <view class="movie-item" wx:for="{{hotList}}" wx:key="index">
+            <image src="{{item.img}}" mode=""/>
+            <view class="con-center">
+                <text class="movieName">{{item.nm}}</text>
+                <text class="scwish">{{item.sc?item.sc:item.wish}}</text>
+                <text class="desc">{{item.desc?item.desc:item.star}}</text>
+                <text class="showInfo">{{item.showInfo}}</text>
+            </view>
+            <view class="con-right" style="background:{{item.showStateButton.color}}">
+                {{item.showStateButton.content}}
+            </view>
+        </view>
+    </view>
+</view> -->

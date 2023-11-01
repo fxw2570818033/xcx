@@ -1,0 +1,14 @@
+<!--pages/eig/eig.wxml-->
+<button type="primary" bindtap="HandlerGet">HandlerGet</button>
+<button type="primary" bindtap="HandlerPost">HandlerPost</button>
+<button type="primary" bindtap="HandlerPut">HandlerPut</button>
+<button type="primary" bindtap="HandlerDelete">HandlerDelete</button>
+<!--  
+    npm install -g json-server
+    json-server --watch server.json
+    get     获取资源
+    post    新建一个资源
+    put     更新/修改资源 传入的新资源会覆盖之前的数据
+    patch   修改资源中某一项属性 不影响其他
+    delete  删除某一项资源
+-->

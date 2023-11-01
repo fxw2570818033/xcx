@@ -1,0 +1,8 @@
+<!--pages/five/five.wxml-->
+<text>pages/five/five.wxml</text>
+<!-- 轮播图 -->
+<swiper indicator-dots="{{true}}" autoplay="{{true}}" current="2" interval="5000" circular="{{true}}">
+    <swiper-item wx:for="{{dataList}}" wx:key="item.id">
+       <image src="{{item.img}}" mode="widthFix" style="width:100%"/>
+    </swiper-item>
+</swiper>

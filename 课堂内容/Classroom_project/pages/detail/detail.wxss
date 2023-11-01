@@ -1,0 +1,73 @@
+/* pages/detail/detail.wxss */
+swiper{
+    height:480rpx;
+}
+swiper image{
+    width:100%;
+    height:480rpx;
+}
+.tab{
+    width:100vw;
+    height:88rpx;
+    display:flex;
+}
+.tab view{
+    flex:1;
+    text-align:center;
+    border:1px solid #ccc;
+    height:84rpx;
+    line-height:84rpx;
+}
+.tab view:first-child{
+    background:skyblue;
+}
+.tab view:last-child{
+    background:deeppink;
+}
+.tab .active{
+    border-bottom:2px solid black;
+}
+.comment{
+    display:flex;
+    flex-direction:column;
+    padding:20rpx;
+    border-bottom:1px solid #ccc;
+}
+.comment .top{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin:10rpx 0;
+}
+.comment .top image{
+    width:100rpx;
+    border-radius:50%;
+}
+.comment .top .name{
+    margin-left:-170rpx;
+}
+.comment .mid{
+    margin:10rpx 0;
+}
+.comment .bottom image{
+    width:200rpx;
+}
+.car{
+    width:100%;
+    position:fixed;
+    height:100rpx;
+    bottom:0;
+    display:flex;
+}
+.car view{
+    flex:1;
+    color:white;
+    text-align:center;
+    line-height:100rpx;
+}
+.car view:first-child{
+    background:rgb(148,228,148);
+}
+.car view:nth-child(2){
+    background:rgb(224,147,147);
+}

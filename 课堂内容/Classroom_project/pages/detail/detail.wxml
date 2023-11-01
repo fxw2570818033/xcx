@@ -1,0 +1,39 @@
+<!--pages/detail/detail.wxml-->
+<view>
+    <swiper>
+        <swiper-item wx:for="{{detailList.slides}}" wx:key="index">
+            <image src="http://localhost:8099{{item}}" mode="aspectFit" data-current="http://localhost:8099{{item}}}}" bindtap="handlePreview"/>
+        </swiper-item>
+    </swiper>
+    <!-- <view>{{detailList.title}}</view>
+    <view>{{detailList.feature}}</view>
+    <view>{{detailList.price}}</view> -->
+</view>
+<mp-sticky offset-top="0">
+    <view class="tab">
+        <view class="{{current == 0 ? 'active' : ''}}" bindtap="handleToggle" data-id="{{0}}">商品详情</view>
+        <view class="{{current == 1 ? 'active' : ''}}" bindtap="handleToggle" data-id="{{1}}">用户评价</view>
+    </view>
+</mp-sticky>
+<view wx:if="{{current == 0}}">
+    <view wx:for="{{detailList.desc}}" wx:key="index">
+        <image src="{{item}}" mode="widthFix" style="width:100%;"/>
+    </view>
+</view>
+<view wx:else>
+    <view wx:for="{{userMsgList}}" wx:key="index" class="comment">
+        <view class="top">
+            <image src="http://localhost:8099{{item.userImageUrl}}" mode="widthFix"/>
+            <view class="name">{{item.nickname}}</view>
+            <view class="time">{{item.creationTime}}</view>
+        </view>
+        <view class="mid">{{item.content}}</view>
+        <view class="bottom">
+            <image src="http://localhost:8099{{item.imgUrl}}" mode="widthFix"/>
+        </view>
+    </view>
+</view>
+<view class="car">
+    <view bindtap="handleAdd">加入购物车</view>
+    <view>立即购买</view>
+</view>

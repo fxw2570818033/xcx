@@ -1,0 +1,8 @@
+/* pages/register/register.wxss */
+input{
+    display:block;
+    width:400rpx;
+    height:80rpx;
+    border:1px solid rgb(160,158,158);
+    border-radius:10rpx;
+}

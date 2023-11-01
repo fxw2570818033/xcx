@@ -1,0 +1,4 @@
+<!--pages/eight/eight.wxml-->
+<!-- <text>pages/eight/eight.wxml</text> -->
+<tabA bindeventclick="eventclick" active="{{active}}"></tabA>  
+<tabB active="{{active}}"></tabB>

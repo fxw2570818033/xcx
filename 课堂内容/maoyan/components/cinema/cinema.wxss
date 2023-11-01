@@ -1,0 +1,84 @@
+/* components/cinema/cinema.wxss */
+.nav-tab{
+    display:flex;
+    width:673rpx;
+    margin: 0 auto;
+    height:80rpx;
+    border-bottom:1px solid #e6e6e6;
+}
+.nav-tab view{
+    flex:1;
+    text-align:center;
+    line-height:80rpx;
+    color:#777;
+}
+.cinema-list .cinema-item{
+    margin-left:30rpx;
+    padding:26rpx 30rpx 26rpx 0;
+    width:690rpx;
+    /* height:178rpx; */
+    border-bottom:1px solid #e6e6e6;
+    font-family:'PingFangSC-Regular,Hiragino Sans GB,sans-serif,Helvetica,宋体';
+}
+.cinema-list .cinema-item .text{
+    display:block;
+}
+.cinema-list .cinema-item .title{
+    display:flex;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    align-items:center;
+}
+.cinema-list .cinema-item .title .name{
+    height: 46rpx;
+    line-height: 46rpx;
+    font-size:32rpx;
+    color: #000;
+}
+.cinema-list .cinema-item .title .price{
+    color:#f03d37;
+    font-size:36rpx;
+}
+.cinema-list .cinema-item .title .fill{
+    color:#f03d37;
+    font-size:24rpx;
+    margin-left:6rpx;
+}
+.cinema-list .cinema-item .location{
+    display:flex;
+}
+.cinema-list .cinema-item .location .addr{
+    width:100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 12rpx;
+    font-size: 26rpx;
+    color: #666;
+}
+.cinema-list .cinema-item .label{
+    margin:8rpx 0;
+    height:34rpx;
+    /* background:lightblue; */
+}
+.cinema-list .cinema-item .label .label-item{
+    display:flex;
+}
+.cinema-list .cinema-item .label .label-item text{
+    display:inline-block;
+    padding:0 6rpx;
+    margin-left:10rpx;
+    font-size:24rpx;
+}
+.cinema-list .cinema-item .label .label-item .hallType{
+    display:inline-block;
+    padding:0;
+    margin-left:0rpx;
+    font-size:0rpx;
+}
+.cinema-list .cinema-item .discount{
+    color:#ccc;
+    font-size:22rpx;
+    margin-top:22rpx;
+}

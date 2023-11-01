@@ -1,0 +1,31 @@
+<!--pages/shopCar/shopCar.wxml-->
+<mp-cells ext-class="my-cells" title="您的购物车列表"> 
+    <view wx:for="{{shopData}}" wx:key="index">
+        <mp-slideview buttons="{{slideButtons}}" bindbuttontap="handleDelete" data-cartsId="{{item.id}}">
+            <mp-cell>  
+                <view class="cell">
+                    <checkbox checked="{{item.checked}}" bindtap="isChecked" data-cartsId="{{item.id}}"/>
+                    <image src="http://localhost:8099{{item.good.poster}}" mode="widthFix"/>
+                    <view>
+                        <view>{{item.good.title}}</view>
+                        <view>价格：{{item.good.price}}</view>
+                    </view>
+                </view>
+                <view slot="footer">
+                    <view class="num">
+                        <text bindtap="handleMinus" data-cartsId="{{item.id}}">-</text>
+                        <input type="text" value="{{item.number}}" bindinput="handleNumber" data-cartsId="{{item.id}}"/>
+                        <text bindtap="handlePlus" data-cartsId="{{item.id}}">+</text>
+                    </view>
+                </view>
+            </mp-cell>
+        </mp-slideview>
+    </view>
+</mp-cells>
+<view class="total">
+    <checkbox value="" bindtap="handleAllChecked" checked="{{allFlag}}">全选</checkbox>
+    <view>
+        <view>总数：{{allNum}}件</view>
+        <view>总价：{{allMoney}}元</view>
+    </view>
+</view>

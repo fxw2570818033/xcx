@@ -1,0 +1,2 @@
+<!--components/time/time.wxml-->
+<view>倒计时还有:{{time}}s</view>

@@ -1,0 +1,11 @@
+/* pages/one_test/one_test.wxss */
+.box{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+.box input{
+    border:1px solid black;
+    width:300px;
+    border-radius:8px;
+}

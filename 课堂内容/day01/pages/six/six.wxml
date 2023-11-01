@@ -1,0 +1,33 @@
+<!--pages/six/six.wxml-->
+<!-- 购物车 -->
+<wxs module="sum" src="./six.wxs"></wxs>
+<checkbox value="" checked="{{false}}"/>抽烟
+<checkbox value="" checked="{{false}}"/>喝酒
+<checkbox value="" checked="{{false}}"/>烫头
+<!--  
+    bindtap 是点击事件
+    bindinput 是修改表单值的时候触发的事件
+    在wxs文件中 定义一些方法等 
+        wxs文件中只能ES5的语法，不支持ES6的语法
+        使用 module.exports = sum 暴露函数或者变量
+    <wxs module="sum" src="./six.wxs"></wxs>
+    wxs组件是引入wxs文件
+    src:是wxs的路径
+    module是wxs暴露的函数名称
+-->
+<view wx:for="{{dataList}}" wx:key="index" class="box">
+    <checkbox value="" checked="{{item.isChecked}}" bindtap="handCheck" data-index="{{index}}"/>
+    <view class="center">
+        <text>{{item.name}}</text>
+        <text>￥{{item.price}}</text>
+    </view>
+    <view class="num">
+        <button disabled="{{item.num <= 1 ? true : false}}" bindtap="minus" data-id="{{index}}">-</button>
+        <input type="text" value="{{item.num}}" bindinput="changeVal" data-id="{{index}}"/>
+        <button bindtap="plus" data-id="{{index}}">+</button>
+    </view>
+</view>
+<checkbox value="" bindtap="allClick" checked="{{allCheck}}">全选</checkbox>
+<checkbox value="" bindtap="inverse" checked="{{inverseCheck}}">反选</checkbox>
+<view>总件：{{sum(dataList).num}}个</view>
+<view>总价：{{sum(dataList).total}}元</view>

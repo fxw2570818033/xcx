@@ -1,0 +1,32 @@
+<!--pages/searchList/searchList.wxml-->
+<view class="sort">
+    <view bindtap="priceSort">
+        价格排序
+        <mp-icon wx:if="{{priceFlag}}" type="field" icon="arrow" color="black" size="{{10}}"></mp-icon>
+        <mp-icon wx:else type="field" icon="back" color="black" size="{{7}}"></mp-icon>
+    </view>
+    <view bindtap="msgSort">
+        好评排序
+        <mp-icon wx:if="{{msgFlag}}" type="field" icon="arrow" color="black" size="{{10}}"></mp-icon>
+        <mp-icon wx:else type="field" icon="back" color="black" size="{{7}}"></mp-icon>
+    </view>
+</view>
+<view wx:for="{{searchList}}" wx:key="index" class="list" bindtap="handleNav" data-id="{{item.id}}" data-title="{{item.title}}">
+    <image src="http://localhost:8099{{item.poster}}" mode="widthFix"/>
+    <view>{{item.title}}</view>
+    <view>价格：<text style="color:red;">{{item.price}}</text>￥</view>
+    <view>好评率：<text style="color:red;">{{item.goodcomment}}</text>好评</view>
+</view>
+
+
+<!-- <view class="list">
+    <view bindtap="handleDetail" wx:for="{{searchList}}" wx:key="index" class="list_item" data-id="{{item.id}}" data-title="{{item.title}}">
+        <image src="http://localhost:8099{{item.poster}}" mode="widthFix"/>
+        <view>
+            <view style="color:red;">{{item.title}}</view>
+            <view class="feature">{{item.feature}}</view>
+            <view>￥{{item.price}}</view>
+            <view>{{item.goodcomment}}好评</view>
+        </view>
+    </view>
+</view> -->

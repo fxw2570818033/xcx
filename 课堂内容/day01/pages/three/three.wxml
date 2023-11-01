@@ -1,0 +1,17 @@
+<!--pages/three/three.wxml-->
+<text>pages/three/three.wxml</text>
+<view class="box">123</view>
+<!-- 选项卡练习 -->
+<view class="main">
+    <view class="{{index===current?'active':''}}" data-ids="{{index}}" wx:for="{{list}}" wx:key="index" bindtap="editIndex">
+        {{item}}
+    </view>
+</view>
+<!-- 组件 scroll-view -->
+<scroll-view scroll-x class="left">
+    <text wx:for="{{numList}}" wx:key="index">{{item}}</text>
+</scroll-view>
+
+<scroll-view scroll-y class="top">
+    <view wx:for="{{numList}}" wx:key="index">{{item}}</view>
+</scroll-view>

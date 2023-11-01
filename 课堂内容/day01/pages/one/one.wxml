@@ -1,0 +1,55 @@
+<!--pages/one/one.wxml-->
+<!-- 
+    .json文件中 
+    "enablePullDownRefresh":true   指的是下拉刷新
+    一般这个配置 都是放到具体的某一个页面中(全局在app.json文件中也能配置)
+-->
+<!-- 数据驱动视图 -->
+<!-- 动态传递参数 达到什么样的效果 -->
+<text class="t1">pages/one/one.wxml</text>
+<view id="v1">我叫view组件</view>
+<!-- {{}}是小程序中绑定data中值的写法 里面可以放入js表达式 -->
+<view>{{10+20}}</view>
+<view>{{10>20?'大于20':'小于20'}}</view>
+<view>{{10>20?'a':'b'}}</view>
+<view>{{myName}}</view>
+<view class="{{10>20?'a':'b'}}">hello world</view>
+<view class="{{arr[0]}}">abc</view>
+<view class="{{arr[1]}}">bcd</view>
+<view class="{{arr[2]}}">cdf</view>
+<!-- 
+    wx:for 表示循环 data中的某一个数组 
+    item 表示数组中的每一项 
+    index 表示数组中的索引  
+    如果两个变量被占用 可以使用 
+    wx:for-index="xxx" wx:for-item="xxx" 
+    改变index和item的变量名字
+    wx:key = "index"
+    为了绑定/区分 当前这个view是唯一的
+    为了虚拟Dom能快速分析和渲染真实的节点
+-->
+<view wx:for="{{list}}" wx:key="index">
+    {{item}}-----{{index}}
+</view>
+<!-- 给index和item关键字起别名 防止变量名冲突 -->
+<view wx:for="{{list}}" wx:for-index="myIndex" wx:for-item="myItem">
+    {{myIndex}}-----{{myItem}}
+    {{item}} 
+    {{index}}
+</view>
+<!-- 
+    wx:if wx:else 条件渲染语句
+    wx:if可以动态的添加或者删除view组件
+ -->
+<view class="a" wx:if="{{flag}}">
+    当我为true时 我显示！！！
+</view>
+<view class="b" wx:else>
+    当我为false时 我显示！！！
+</view>
+<view>
+    上面连个view只会显示一个
+</view>
+<!-- hidden属性可以动态显示或者隐藏组件 -->
+<view hidden="{{hide}}">hidden为false时显示该组件</view>
+<button type="primary" bindtap="tabFlag">切换flag的值</button>

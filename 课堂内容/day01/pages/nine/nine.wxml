@@ -1,0 +1,10 @@
+<!--pages/nine/nine.wxml-->
+<!-- 插槽 slot -->
+<btnCom>
+    <button type="primary" bindtap="showIt" slot="left">显示</button>
+    <button type="primary" bindtap="hideIt" slot="right">隐藏</button>
+</btnCom>
+
+<view class="bottom" wx:if="{{flag}}">
+    承意伟妈妈说：儿子你以后就只能吃软饭了
+</view> 

@@ -1,0 +1,2 @@
+<!--components/mysearch/mysearch.wxml-->
+<input type="text" bindtap="handleclick" placeholder="请搜索..."/>

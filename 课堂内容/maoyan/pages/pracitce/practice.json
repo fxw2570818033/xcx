@@ -1,0 +1,8 @@
+{
+    "usingComponents": {
+        "hot":"/components/hot/hot",
+        "cinema":"/components/cinema/cinema",
+        "ready":"/components/ready/ready",
+        "classic":"/components/classic/classic"
+    }
+}

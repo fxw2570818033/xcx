@@ -1,0 +1,62 @@
+<!--pages/eleven/eleven.wxml-->
+<!--  
+    navigate
+        保留当前页面，跳转到应用内的某个页面。但是不能跳到 tabbar 页面。使用 wx.navigateBack 可以返回到原页面。小程序中页面栈最多十层
+    redirect 
+        关闭当前页面，跳转到应用内的某个页面。但是不允许跳转到 tabbar 页面。
+    switchTab 
+        跳转到 tabBar 页面，并关闭其他所有非 tabBar 页面
+    reLaunch  
+        关闭所有页面，打开到应用内的某个页面
+-->
+<!-- <navigator url="/pages/four/four" open-type="navigate">跳转到电影详情</navigator>
+
+<navigator url="/pages/index/index" open-type="switchTab">跳转到tabBar页面</navigator>
+
+<navigator url="/pages/index/index" open-type="reLaunch">跳转到tabBar页面</navigator>
+<navigator url="/pages/four/four" open-type="reLaunch">跳转到电影详情</navigator> -->
+
+<!-- <view>{{dataList.name}}</view>
+<view>{{dataList.type}}</view>
+<view>{{dataList.time}}</view>
+<view>{{dataList.desc}}</view> -->
+<!-- 
+    opt={
+        "name":"电影《第八个嫌疑人》曝终极预告 齐溪深陷逃犯婚姻骗局",
+        "type":"剧情,犯罪",
+        "time":"9月9日 周六",
+        "desc":"主演:大鹏,林家栋,张颂文"
+        } 
+-->
+
+<!-- https://m.maoyan.com/mtrade/cinema/movie?movieId=1457792&ci=1&lat=40.202053&lng=116.176778 -->
+
+<!-- https://m.maoyan.com/api/mtrade/mmcs/cinema/v2/select/movie/cinemas.json?limit=20&offset=0&utm_term=7.5&client=iphone&channelId=4&showDate=2023-09-29&movieId=1457792&sort=distance&cityId=1&ci=1&lat=40.202053&lng=116.176778&districtId=-1&lineId=-1&areaId=-1&stationId=-1&brandIds=[-1]&serviceIds=[-1]&hallTypeIds=[%22all%22]&languageIds=[%22all%22]&dimIds=[%22all%22]&yodaReady=h5&csecplatform=4&csecversion=2.2.1&mtgsig=%7B%22a1%22%3A%221.1%22%2C%22a2%22%3A1695715343908%2C%22a3%22%3A%221695713700496SWKQUIEfd79fef3d01d5e9aadc18ccd4d0c95072299%22%2C%22a5%22%3A%22XhYUXPIBN3ATBtfyiQxK%22%2C%22a6%22%3A%22hs1.4RhXRbf95%2FGVxNtwgxEz6duJJj2Af9czZwHVxH%2BrewfcCIlqzd%2F8M8GoLg4GAqiIy0%2FX8vWLKjKbgPbda9hwN%2FA%3D%3D%22%2C%22x0%22%3A4%2C%22d1%22%3A%22b34b65d7a536d8179822812b167dbdc6%22%7D
+
+https://m.maoyan.com/api/mtrade/mmcs/cinema/v2/select/movie/cinemas.json?limit=20&offset=0&utm_term=7.5&client=iphone&channelId=4&showDate=2023-09-30&movieId=1457792&sort=distance&cityId=1&ci=1&lat=40.202053&lng=116.176778&districtId=-1&lineId=-1&areaId=-1&stationId=-1&brandIds=[-1]&serviceIds=[-1]&hallTypeIds=[%22all%22]&languageIds=[%22all%22]&dimIds=[%22all%22]&yodaReady=h5&csecplatform=4&csecversion=2.2.1&mtgsig=%7B%22a1%22%3A%221.1%22%2C%22a2%22%3A1695715711306%2C%22a3%22%3A%221695713700496SWKQUIEfd79fef3d01d5e9aadc18ccd4d0c95072299%22%2C%22a5%22%3A%22%2Bu34SM3hThPvjMk5FpriEZ%3D%3D%22%2C%22a6%22%3A%22hs1.4RhXRbf95%2FGVxNtwgxEz6dlq8qzjBKYh7BOSPch2fq2reN5ImwHLJa6X15bWdSWfmRSdBaLSRnQ5n6XwdwQNr%2BA%3D%3D%22%2C%22x0%22%3A4%2C%22d1%22%3A%2202486e7939ce399c64b79b4b3b8657e9%22%7D
+
+
+https://m.maoyan.com/api/mtrade/mmcs/cinema/v2/select/movie/cinemas.json?limit=20&offset=0&utm_term=7.5&client=iphone&channelId=4&showDate=2023-09-30&movieId=1457792&sort=distance&cityId=1&ci=1&lat=40.202053&lng=116.176778&districtId=-1&lineId=-1&areaId=-1&stationId=-1&brandIds=[-1]&serviceIds=[-1]&hallTypeIds=[%22all%22]&languageIds=[%22all%22]&dimIds=[%22all%22]&yodaReady=h5&csecplatform=4&csecversion=2.2.1
+
+https://m.maoyan.com/api/mtrade/mmcs/cinema/v2/select/movie/cinemas.json?limit=20&offset=0&utm_term=7.5&client=iphone&channelId=4&showDate=2023-09-30&movieId=1457792&sort=distance&cityId=1&ci=1&lat=40.202053&lng=116.176778&districtId=-1&lineId=-1&areaId=-1&stationId=-1&brandIds=[-1]&serviceIds=[-1]&hallTypeIds=[%22all%22]&languageIds=[%22all%22]&dimIds=[%22all%22]&yodaReady=h5&csecplatform=4&csecversion=2.2.1
+
+https://m.maoyan.com/api/mtrade/mmcs/cinema/v1/select/movie/items.json?channelId=4&cityId=1&showDate=2023-10-01&movieId=1457792&yodaReady=h5&csecplatform=4&csecversion=2.2.1
+
+<!-- 热映  初始12条 -->
+<!-- https://i.maoyan.com/api/mmdb/movie/v3/list/hot.json?ct=%E6%88%90%E9%83%BD&ci=59&channelId=4 -->
+<!-- 热映  10条。。 -->
+<!-- https://i.maoyan.com/ajax/moreComingList?token=&movieIds=1456735,344942,1282470,78894,1452790,1359675,1462687,1413252,1352531,1368974&optimus_uuid=9070E7B0575111EEA63F6B02896CD5054620AF966F114BDD9954053F1D39E108&optimus_risk_level=71&optimus_code=10 -->
+
+<!-- 待映 近期最受期待 -->
+<!-- https://i.maoyan.com/ajax/mostExpected?limit=10&offset=0&token=&optimus_uuid=9070E7B0575111EEA63F6B02896CD5054620AF966F114BDD9954053F1D39E108&optimus_risk_level=71&optimus_code=10 -->
+<!-- 待映 -->
+<!-- https://i.maoyan.com/ajax/comingList?ci=59&limit=10&movieIds=&token=&optimus_uuid=9070E7B0575111EEA63F6B02896CD5054620AF966F114BDD9954053F1D39E108&optimus_risk_level=71&optimus_code=10 -->
+
+<!-- https://i.maoyan.com/ajax/moreComingList?ci=59&limit=10&movieIds=1301084,1371010,1502343,1502534,1424022,1414010,1413218,1455594,1199751,1500516&token=&optimus_uuid=9070E7B0575111EEA63F6B02896CD5054620AF966F114BDD9954053F1D39E108&optimus_risk_level=71&optimus_code=10 -->
+
+
+<!-- 经典电影 -->
+<!-- https://i.maoyan.com/ajax/moreClassicList?sortId=1&showType=3&limit=10&offset=0&optimus_uuid=9070E7B0575111EEA63F6B02896CD5054620AF966F114BDD9954053F1D39E108&optimus_risk_level=71&optimus_code=10 -->
+
+<!-- 影院 -->
+<!-- https://i.maoyan.com/ajax/moreCinemas?movieId=0&day=2023-09-26&offset=0&limit=20&districtId=-1&lineId=-1&hallType=-1&brandId=-1&serviceId=-1&areaId=-1&stationId=-1&item=&updateShowDay=true&reqId=1695719834236&cityId=59&optimus_uuid=9070E7B0575111EEA63F6B02896CD5054620AF966F114BDD9954053F1D39E108&optimus_risk_level=71&optimus_code=10 --> -->

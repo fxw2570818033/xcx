@@ -1,0 +1,13 @@
+<!--pages/one_test/one_test.wxml-->
+<text>pages/one_test/one_test.wxml</text>
+<view class="box">
+    <input type="text" value="{{val}}" bindinput="editVal"/>
+    <button type="primary" size="mini" bindtap="addItem">添加</button>
+</view>
+<!-- 实现 往input输入值往下面添加列表 以及删除列表项自己 -->
+<block wx:if="{{list.length}}">
+    <view wx:for="{{list}}" wx:key="index">
+    {{item}}---- <button data-id="{{index}}" type="primary" size="mini" bindtap="deleItem">删除</button>
+    </view>
+</block>
+<view wx:else>当前列表为空，请您添加</view>

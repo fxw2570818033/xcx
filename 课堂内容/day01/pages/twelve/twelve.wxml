@@ -1,0 +1,2 @@
+<!--pages/twelve/twelve.wxml-->
+<button bindtap="getlocation" type="primary">位置</button>

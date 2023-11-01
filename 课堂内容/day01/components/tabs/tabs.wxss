@@ -1,0 +1,17 @@
+/* components/tabs/tabs.wxss */
+.box{
+    display:flex;
+    flex-direction:row;
+}
+.box view{
+    flex:1;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:60rpx;
+    border:1rpx solid #000;
+}
+.active{
+    background:red;
+    color:white;
+}

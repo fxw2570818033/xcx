@@ -1,0 +1,30 @@
+<!--components/hot/hot.wxml-->
+<wxs module="fillText" src="./hot.wxs"></wxs>
+<view wx:if="{{flag}}">
+    <view class="content">
+        <view class="hot">
+            <text>最受好评电影</text>
+            <scroll-view scroll-x="{{true}}" enable-flex="{{true}}">
+                <view class="scroll-item" wx:for="{{fillText(hotList)}}" wx:key="index">
+                    <image src="{{item.img}}" mode=""/>
+                    <text class="hotScore">{{item.scwish}}</text>
+                    <text class="hotName">{{item.nm}}</text>
+                </view>
+            </scroll-view>
+        </view>
+        <view class="movie">
+            <view class="movie-item" wx:for="{{hotList}}" wx:key="index">
+                <image src="{{item.img}}" mode=""/>
+                <view class="con-center">
+                    <text class="movieName">{{item.nm}}</text>
+                    <text class="scwish">{{item.sc?item.sc:item.wish}}</text>
+                    <text class="desc">{{item.desc?item.desc:item.star}}</text>
+                    <text class="showInfo">{{item.showInfo}}</text>
+                </view>
+                <view class="con-right" style="background:{{item.showStateButton.color}}">
+                    {{item.showStateButton.content}}
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

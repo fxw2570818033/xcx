@@ -1,0 +1,16 @@
+/* components/tablist/tablist.wxss */
+.box{
+    display:flex;
+    flex-direction:row;
+}
+.box view{
+    flex:1;
+    height:80rpx;
+    line-height:80rpx;
+    text-align:center;
+    border:1px solid #000;
+}
+.active{
+    background:red;
+    color:white;
+}

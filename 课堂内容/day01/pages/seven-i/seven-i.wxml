@@ -1,0 +1,20 @@
+<!--pages/seven-i/seven-i.wxml-->
+<!-- 自定义组件 -->
+<!-- 组件之间的通信 -->
+<!-- 
+    组件不是页面  页面可以是由一个组件或多个组件构成的
+    复用性 提升工作效率  
+    维护性
+-->
+<!--   -->
+<tablist list="{{arr}}" current="{{i}}" bindeventcurrentval="handCurrent"></tablist>
+<swiper indicator-dots="{{true}}" circular="{{true}}" bindchange="getCurrent" current="{{i}}">
+    <swiper-item wx:for="{{swiperList}}" wx:key="index" >
+        {{item}}
+    </swiper-item>
+</swiper>
+<!-- 
+    1.定义好 自定义组件
+    2.在页面对应的那个json文件中进行注册 
+    3.在wxml中使用
+-->

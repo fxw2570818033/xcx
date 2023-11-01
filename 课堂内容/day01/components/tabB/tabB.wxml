@@ -1,0 +1,2 @@
+<!--components/tabB/tabB.wxml-->
+<view class="tabB" hidden="{{active}}">佟泓雨妈妈说：以后就只能吃软饭了</view>

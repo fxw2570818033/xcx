@@ -1,0 +1,4 @@
+/* pages/five/five.wxss */
+swiper{
+    height:351.562rpx;
+}

@@ -1,0 +1,114 @@
+/* components/hot/hot.wxss */
+.content{
+    background:#f4f4f4;
+}
+.hot{
+    padding:24rpx 30rpx;
+    margin-bottom:20rpx;
+    background:#fff;
+    height:346rpx;
+}
+.hot>text{
+    font-size:28rpx;
+    font-size:#333;
+    display:block;
+    margin-bottom:24rpx;
+}
+.hot scroll-view{
+    display:flex;
+    height:286rpx;
+}
+.hot scroll-view .scroll-item{
+    width:170rpx;
+    height:286rpx;
+    margin-right:20rpx;
+    position:relative;
+}
+.hot scroll-view .scroll-item image{
+    width:170rpx;
+    height:230rpx;
+}
+.hot scroll-view .scroll-item .hotScore{
+    position:absolute;
+    left:8rpx; bottom:60rpx;
+    color:#faaf00;
+    font-size:22rpx;
+    font-weight:700;
+    width:100%;
+}
+.hot scroll-view .scroll-item .hotName{
+    display:block;
+    width:170rpx;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+    font-size:26rpx;
+    color:#222;
+}
+.movie{
+
+}
+.movie .movie-item{
+    width:100%;
+    height:228rpx;
+    padding-left:30rpx;
+    box-sizing:border-box;
+    background:#fff;
+    display:flex;
+    align-items:center;
+}
+.movie .movie-item image{
+    margin-top:24rpx;
+    width:128rpx;
+    height:180rpx;
+    display:block;
+}
+.movie .movie-item .con-center{
+    margin-left:28rpx;
+    width:474rpx;
+    height:180rpx;
+    display:flex;
+    flex-direction:column;
+    margin-top:48rpx;
+    padding:0 0 28rpx 0;
+    border-bottom:1px solid #ccc;
+    flex-shrink: 0;
+}
+.movie .movie-item .con-center text{
+    display:block;
+    width:100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.movie .movie-item .con-center .movieName{
+    font-weight:700;
+    font-size:34rpx;
+    color:#333;
+    margin-bottom:14rpx;
+}
+.movie .movie-item .con-center .scwish{
+    color:#faaf00;
+    font-size:30rpx;
+}
+.movie .movie-item .con-center .desc{
+   color:rgb(102, 102, 102);
+   font-size:26rpx;
+   margin-top:12rpx;
+}   
+.movie .movie-item .con-center .showInfo{
+    color:rgb(102, 102, 102);
+    font-size:26rpx;
+    margin-top:12rpx;
+}
+.movie .movie-item .con-right{
+    margin-top:36rpx;
+    width:108rpx;
+    height:54rpx;
+    color:white;
+    text-align:center;
+    line-height:54rpx;
+    font-size:24rpx;
+    border-radius:32rpx;
+    margin-right:28rpx;
+}

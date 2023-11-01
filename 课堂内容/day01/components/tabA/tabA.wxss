@@ -1,0 +1,8 @@
+/* components/tabA/tabA.wxss */
+view{
+    display:flex;   
+}
+.bgColor{
+    background:red;
+    color:white;
+}

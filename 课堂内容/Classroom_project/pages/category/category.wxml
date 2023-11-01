@@ -1,0 +1,20 @@
+<!--pages/category/category.wxml-->
+<mp-vtabs 
+  vtabs="{{vtabs}}" 
+  activeTab="{{activeTab}}" 
+  bindtabclick="onTabCLick"
+  bindchange="onChange"
+  class="test"
+>
+  <block wx:for="{{vtabs}}" wx:key="title" >
+    <mp-vtabs-content tabIndex="{{index}}">
+        <view class="vtabs-content-item" style="height:{{hei[index]}}rpx">
+            <view wx:for="{{item.goods}}" wx:key="index" class="item">
+                <image src="http://localhost:8099{{item.poster}}" mode="widthFix" bindtap="handleNav" data-id="{{item.id}}" data-title="{{item.title}}"/>
+                <view>{{item.title}}</view>
+                <view>{{item.price}}</view>
+            </view>
+        </view>
+    </mp-vtabs-content>
+  </block>
+</mp-vtabs>

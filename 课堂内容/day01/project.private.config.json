@@ -1,0 +1,56 @@
+{
+    "description": "项目私有配置文件。此文件中的内容将覆盖 project.config.json 中的相同字段。项目的改动优先同步到此文件中。详见文档：https://developers.weixin.qq.com/miniprogram/dev/devtools/projectconfig.html",
+    "projectname": "day01",
+    "setting": {
+        "compileHotReLoad": false,
+        "urlCheck": false
+    },
+    "condition": {
+        "miniprogram": {
+            "list": [
+                {
+                    "name": "",
+                    "pathName": "pages/twelve/twelve",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/eleven/eleven",
+                    "query": "opt=%7B%22name%22%3A%22%E7%94%B5%E5%BD%B1%E3%80%8A%E7%AC%AC%E5%85%AB%E4%B8%AA%E5%AB%8C%E7%96%91%E4%BA%BA%E3%80%8B%E6%9B%9D%E7%BB%88%E6%9E%81%E9%A2%84%E5%91%8A%20%E9%BD%90%E6%BA%AA%E6%B7%B1%E9%99%B7%E9%80%83%E7%8A%AF%E5%A9%9A%E5%A7%BB%E9%AA%97%E5%B1%80%22%2C%22type%22%3A%22%E5%89%A7%E6%83%85%2C%E7%8A%AF%E7%BD%AA%22%2C%22time%22%3A%229%E6%9C%889%E6%97%A5%20%E5%91%A8%E5%85%AD%22%2C%22desc%22%3A%22%E4%B8%BB%E6%BC%94%3A%E5%A4%A7%E9%B9%8F%2C%E6%9E%97%E5%AE%B6%E6%A0%8B%2C%E5%BC%A0%E9%A2%82%E6%96%87%22%7D",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/five/five",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/seven_i/seven_i",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/six/six",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                },
+                {
+                    "name": "",
+                    "pathName": "pages/exercise/exercise",
+                    "query": "",
+                    "launchMode": "default",
+                    "scene": null
+                }
+            ]
+        }
+    }
+}
