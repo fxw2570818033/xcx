@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vertical-align</title>
+    <style>
+        body>img{
+            width:100px; height:100px;
+            /* vertical-align:bottom; */
+            /* 让图片和文字垂直居中 */
+            vertical-align:middle;
+            /* vertical-align:top; */
+        }
+        textarea{
+            vertical-align:bottom;
+        }
+        div img{
+            width:100px; height:100px;
+            /* vertical-align:bottom; */
+            /* vertical-align:middle; */
+            /* 或者转换为块级元素 */
+            display:block;
+        }
+        div{
+            border:2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <!--  
+        css的vertical-align属性使用场景：经常用于设置图片或者表单(行内块元素)和文字垂直对齐
+        官方解释：用于设置一个元素的垂直对齐方式，但是它只针对与行内元素或者行内块元素有效
+        vertical-align:baseline | top | middle | bottom;
+        图片、表单都属于行内块元素 默认的vertical-align都是基线对齐
+    -->
+    <img src="./1.jpg" alt="">pink老师是刘德华
+    <br>
+    <textarea name="" id="" cols="30" rows="10"></textarea>请您留言
+    <!--  
+        解决图片下方缝隙的问题
+    -->
+    <div><img src="./2.jpg" alt=""></div>
+</body>
+</html>

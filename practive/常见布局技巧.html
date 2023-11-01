@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常见布局技巧</title>
+    <style>
+        *{
+            margin:0; padding:0;
+        }
+        img{
+            vertical-align:middle;
+            width:120px; height:60px;
+        }
+        ul{
+            overflow:hidden;
+        }
+        ul li{
+            list-style:none;
+            width:150px; height:200px;
+            border:1px solid red;
+            float:left;
+            /* margin负值的巧妙运用 */
+            margin-left:-1px;
+            position:relative;
+        }
+        ul li:hover{
+            border-color:yellow;
+            /* 第一种思路 如果盒子没有定位 则鼠标经过添加相对定位即可*/
+            /* position:relative; */
+            /* 第二种思路 如果盒子都有定位 则用z-index提高层级 */
+            z-index:1;
+        }
+        .box{
+            width:300px; height:70px;
+            background:pink;
+            margin:0 auto;
+            padding:5px;
+        }
+        .pic{
+            width:120px; height:60px;
+            float:left;
+            margin-right:5px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <!-- margin -->
+    <!-- 文字围绕浮动元素 -->
+    <div class="box">
+        <div class="pic">
+            <img src="./1.jpg" alt="">
+        </div>
+        <p>v角度出我就饿哦放开我发v没事了</p>
+    </div>
+</body>
+</html>
