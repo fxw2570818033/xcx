@@ -1,0 +1,45 @@
+/* components/shopcar/shopcar.wxss */
+.box{
+    display:flex;
+    align-items:center;
+    height:300rpx;
+    background:#fff;
+    box-sizing:border-box;
+    padding:10rpx 20rpx;
+    border-bottom:2px solid #f2f2f2;
+}
+.box>input{
+    background:#ccc;
+}
+.box>image{
+    width:30vw;
+}
+.box .right{
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+    height:100%;
+    margin-left:16rpx;
+    width:50%;
+}
+.box .right .shopNum{
+    display:flex;
+    justify-content:space-between;
+}
+.box .right .shopNum .nums{
+    display:flex;
+    align-items:center;
+}
+.box .right .shopNum .nums input{
+    width:60rpx;
+    text-align:center;
+    border:1px solid #ccc; 
+}
+.box .right .shopNum .nums view{
+    width:40rpx;
+    height:40rpx;
+    /* border:1px solid #ccc; */
+    text-align:center;
+    line-height:40rpx;
+    font-weight:bold;
+}

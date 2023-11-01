@@ -1,0 +1,43 @@
+<!--pages/test/test.wxml-->
+<!-- <text>pages/test/test.wxml</text> -->
+<!-- <view>
+    <mp-sticky offset-top="32">
+        <button size="mini" type="primary" style="margin-left: 115px; background-color: #1989fa">吸顶距离</button>
+    </mp-sticky>
+    
+</view> -->
+<!-- <mp-searchbar bindselectresult="selectResult" search="{{search}}"></mp-searchbar> -->
+<!-- <mp-searchbar bindselectresult="selectResult" search="{{search}}"></mp-searchbar> -->
+
+<!-- 
+    _page  第几页
+    _limit 一页多少条
+    分页查询才有 总条数 res.header['X-Total-Count'] 获取数据的总条数
+    /categories?_embed=goods'  
+    动态设置导航标头
+    wx.setNavigationBarTitle({
+        title:titles,
+    })
+    // 点击图片进行预览 可以保存图片到相册或者可以转发图片
+    handlePreview(evt){
+        console.log(evt);
+        let current = evt.currentTarget.dataset.current;
+        在新页面中全屏预览图片。预览的过程中用户可以进行保存图片、发送给朋友等操作。
+        wx.previewImage({
+            current:current, //当前显示图片的http链接
+            urls:this.data.detailList.slides.map(item => {
+                return `http://localhost:3000${item}`
+            }), 需要预览的图片http链接列表
+        })
+    },
+    wx.getUserProfile({
+            desc: '获取用户信息token',
+            success(res){
+                console.log(res);
+                wx.setStorageSync('token',res.userInfo);
+                wx.navigateTo({
+                    url:"/pages/register/register"
+                })
+            }
+        })
+ -->

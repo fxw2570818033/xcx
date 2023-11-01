@@ -1,0 +1,76 @@
+<!--pages/main/main.wxml-->
+<mp-sticky offset-top="1">
+    <view id="toper">
+        <image src="../../icon/search.png" mode="widthFix"/>
+        <input type="text" placeholder="日日鲜"/>   
+        <button type="primary" size="mini">搜索</button>
+    </view>
+</mp-sticky>
+<view id="box">
+    <scroll-view enable-flex="true" scroll-x="true">
+        <view class="box">
+            <view wx:for="{{fdLarge}}" wx:key="index" data-id="{{item.id}}" bindtap="handleCategory">
+            <image src="{{item.gimage}}" mode="widthFix"/>
+            <text class="fdname">{{item.title}}</text>
+        </view>  
+        </view>
+    </scroll-view>
+</view>
+<view id="find">
+    <view class="finds">
+        <view class="time">
+            <text>限时抢购</text>
+            <view class="time-view">
+                <view wx:for="{{gettime}}" wx:key="index">{{item}}</view>
+            </view>
+        </view>
+        <swiper vertical="true" autoplay circular="true">
+            <swiper-item wx:for="{{swiper}}" wx:key="index">
+                <view wx:for="{{item}}" wx:key="index">
+                    <image src="{{item.image}}" mode="widthFix"/>
+                    <view>
+                        <text style="color:red;">￥{{item.xian}}</text>
+                        <text style="color:#ccc;text-decoration: line-through;">￥{{item.yuan}}</text>
+                    </view>
+                </view>
+            </swiper-item>
+        </swiper>
+    </view>
+    <view class="finds">
+        <view>
+            <text>时令新品</text>
+            <image src="http://blog.img.duanshuilu.com/nbsd4fsd45fsd5f.jpg" mode="widthFix"/>
+            <text style="color:red;">￥25.2</text>
+        </view>
+        <view>
+            <text>时令新品</text>
+            <image src="http://blog.img.duanshuilu.com/nbsd4fsd45fsd5f.jpg" mode="widthFix"/>
+            <text style="color:red;">￥3.2</text>
+        </view>
+    </view>
+    <view class="finds">
+        <view>
+            <text>平价菜场</text>
+            <image src="http://blog.img.duanshuilu.com/nbsd4fsd45fsd5f.jpg" mode="widthFix"/>
+            <text style="color:red;">￥1.2</text>
+        </view>
+        <view>
+            <text>发现好货</text>
+            <image src="http://blog.img.duanshuilu.com/nbsd4fsd45fsd5f.jpg" mode="widthFix"/>
+            <text style="color:red;">￥0.5</text>
+        </view>
+    </view>
+    <view class="finds">
+        <view>
+            <text>绿卡会员</text>
+            <image src="http://blog.img.duanshuilu.com/nbsd4fsd45fsd5f.jpg" mode="widthFix"/>
+            <text style="color:red;">5折</text>
+        </view>
+        <view>
+            <text>宝妈严选</text>
+            <image src="http://blog.img.duanshuilu.com/nbsd4fsd45fsd5f.jpg" mode="widthFix"/>
+            <text style="color:red;">￥9.9</text>
+        </view>
+    </view>
+</view>
+

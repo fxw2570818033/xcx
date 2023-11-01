@@ -1,0 +1,16 @@
+<!--components/shopcar/shopcar.wxml-->
+<view class="box" wx:for="{{goods}}" wx:key="index">
+    <checkbox value=""/>
+    <image src="{{item.small_image}}" mode="widthFix"/>
+    <view class="right">
+        <text class="name">{{item.name}}</text>
+        <view class="shopNum">
+            <text class="price">￥{{item.price}}</text>
+            <view class="nums">
+                <view class="minus" bindtap="handleMinus" data-foodsId="{{item.id}}" data-categoryId="{{item.categoryId}}">-</view>
+                <input type="text" class="num" value="{{item.num}}"/>
+                <view class="plus" bindtap="handlePlus" data-foodsId="{{item.id}}" data-categoryId="{{item.categoryId}}">+</view>
+            </view>
+        </view>
+    </view>
+</view>

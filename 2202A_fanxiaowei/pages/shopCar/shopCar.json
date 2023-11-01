@@ -1,0 +1,7 @@
+{
+    "usingComponents": {
+        "shopcar":"/components/shopcar/shopcar"
+    },
+    "navigationBarTitleText": "购物车",
+    "navigationBarBackgroundColor": "#f2f2f2"
+}

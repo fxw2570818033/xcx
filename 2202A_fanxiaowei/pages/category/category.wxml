@@ -1,0 +1,50 @@
+<!--pages/category/category.wxml-->
+<mp-searchbar></mp-searchbar>
+<view class="category" bindtap="handleCategory">
+    <text>全部</text>
+    <image src="/icon/分类.png" mode="widthFix"/>
+</view>
+<view class="modal" wx:if="{{toggle}}">
+    <view>
+        <text>全部分类</text>
+        <button bindtap="handleHide">X</button>
+    </view>
+    <view>
+        <view wx:for="{{tab}}" wx:key="index" bindtap="handleActive" data-num="{{index}}">
+            <image src="{{item.gimage}}" mode="widthFix"/>
+            <text>{{item.title}}</text>
+        </view>
+    </view>
+</view>
+<mp-sticky offset-top="1">
+    <scroll-view scroll-x enable-flex="true">
+        <view class="tab">
+            <view wx:for="{{tab}}" wx:key="index" class="tab-item {{index == num ? 'active': ''}}" bindtap="handleTab" data-num="{{index}}">
+                <image src="{{item.gimage}}" mode="widthFix"/>
+                <text>{{item.title}}</text>
+            </view>
+        </view>
+    </scroll-view>
+</mp-sticky>
+
+<view style="display:flex;background:#fff;justify-content:space-around;align-items:center;border:1px solid #ccc;">
+    <view>人气推荐</view>
+    <view>销量</view>
+    <view>价格</view>
+</view>
+<scroll-view scroll-y style="height:100vh;">
+    <view wx:for="{{content}}" wx:key="index" class="content">
+        <image src="{{item.small_image}}" mode=""/>
+        <view class="right">
+            <view class="name">{{item.name}}</view>
+            <view class="spec">{{item.spec}}</view>
+            <view class="price">
+                <view class="price" style="color:red">￥{{item.price}}</view>
+                <view class="sales">
+                    <image src="../../icon/shopCar-tab.png" mode="widthFix" bindtap="handelShopCar" data-id="{{item.id}}"/>
+                    <view wx:if="{{item.num}}">{{item.num}}</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</scroll-view>

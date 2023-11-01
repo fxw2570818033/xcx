@@ -1,0 +1,9 @@
+{
+    "usingComponents": {
+        "mp-sticky": "@miniprogram-component-plus/sticky"
+    },
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#FF6633",
+    "navigationBarTitleText": "日食鲜食",
+    "navigationBarTextStyle": "black"
+}

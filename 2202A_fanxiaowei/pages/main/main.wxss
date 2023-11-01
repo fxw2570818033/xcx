@@ -1,0 +1,135 @@
+/* pages/main/main.wxss */
+page{
+    /* background:#FF6633; */
+}
+#toper{
+    width:100vw;
+    height:80rpx;
+    background:#FF6633;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    position:relative;
+}
+#toper image{
+    width:50rpx;
+    height:50rpx;
+    position:absolute;
+    left:2vw;
+}
+#toper input{
+    width:90%;
+    height:50rpx;
+    border-radius:16rpx;
+    background-color:#fff;
+    padding:0 152rpx 0 80rpx;
+}
+#toper button{
+    position:absolute;
+    right:0;
+    width:150rpx;
+    height:50rpx;
+    line-height:50rpx;
+    background:red;
+}
+#box{
+    width:96vw;
+    height:64vw;
+    padding:0 5rpx;
+    background:#f2f2f2;
+    margin:10rpx auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    /* overflow:hidden; */
+}
+scroll-view .box{
+    width:200vw;
+    display:flex;
+    height:60vw;
+    flex-wrap:wrap;
+    background:#fff;
+}
+scroll-view .box view{
+    width:20vw;
+    height:20vw;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+scroll-view view image{
+    width:80%;
+}
+#find{
+    display:flex;
+    background:#f2f2f2;
+    margin:0 auto;
+    width:96vw;
+    height:96vw;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+}
+.finds{
+    display:flex;
+    width:46vw;
+    height:46vw;
+    background:#fff;
+    border-radius:16rpx;
+}
+.finds:nth-child(1){
+    flex-direction:column;
+}
+.finds:nth-child(1) .time{
+    display:flex;
+    flex-direction:row;
+    width:100%;
+}
+.time .time-view{
+    flex:1;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-evenly;
+}
+.time .time-view view{
+    background:red;
+    color:white;
+    width:30%;
+    font-size:24rpx;
+    text-align:center;
+    height:40rpx;
+    line-height:40rpx;
+}
+.finds>view{
+    width:50%;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-evenly;
+}
+.finds view image{
+    width:90%;
+}
+swiper{
+    display:flex;
+    flex-wrap:wrap;
+    width:100%;
+}
+#find .finds swiper swiper-item{
+    display:flex;
+}
+#find .finds swiper swiper-item>view{
+    width:50% !important;
+    display:flex;
+    flex-direction:column;
+    justify-content:space-around;
+}
+#find .finds>swiper>swiper-item>view image{
+    width:50%;
+}
+.finds swiper swiper-item>view view{
+    display:flex;
+    width:100%;
+    justify-content:space-around;
+    font-size:30rpx;
+}

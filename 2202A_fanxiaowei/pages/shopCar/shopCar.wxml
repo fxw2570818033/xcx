@@ -1,0 +1,2 @@
+<!--pages/shopCar/shopCar.wxml-->
+<shopcar goods="{{goods}}" bindeventminus="eventminus" bindeventplus="eventplus"></shopcar>
